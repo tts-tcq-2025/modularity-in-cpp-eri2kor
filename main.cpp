@@ -1,6 +1,6 @@
 #include "color_coder.h"
 #include <iostream>
-#include <assert.h>
+#include <cassert>
 
 using namespace TelCoColorCoder;
 
@@ -24,5 +24,6 @@ int main() {
     testPairToNumber(BLACK, ORANGE, 12);
     testPairToNumber(VIOLET, SLATE, 25);
 
+    std::cout << "All tests passed!" << std::endl;
     return 0;
 }
