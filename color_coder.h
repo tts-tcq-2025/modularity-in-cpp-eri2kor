@@ -2,20 +2,23 @@
 #include <string>
 
 namespace TelCoColorCoder {
-    enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
-    enum MinorColor { BLUE, ORANGE, GREEN, BROWN, SLATE };
 
-    class ColorPair {
-     public:
-        ColorPair(MajorColor major, MinorColor minor);
-        MajorColor getMajor();
-        MinorColor getMinor();
-        std::string ToString();
-     private:
-        MajorColor majorColor;
-        MinorColor minorColor;
-    };
+enum MajorColor { WHITE, RED, BLACK, YELLOW, VIOLET };
+enum MinorColor { BLUE, ORANGE, GREEN, BROWN, SLATE };
 
-    ColorPair GetColorFromPairNumber(int pairNumber);
-    int GetPairNumberFromColor(MajorColor major, MinorColor minor);
-}
+class ColorPair {
+ public:
+    ColorPair(MajorColor major, MinorColor minor);
+    MajorColor getMajor() const;
+    MinorColor getMinor() const;
+    std::string ToString() const;
+ private:
+    MajorColor majorColor;
+    MinorColor minorColor;
+};
+
+// Functions to convert between numbers and colors
+ColorPair GetColorFromPairNumber(int pairNumber);
+int GetPairNumberFromColor(MajorColor major, MinorColor minor);
+
+}  // namespace TelCoColorCoder
