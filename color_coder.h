@@ -17,7 +17,6 @@ class ColorPair {
     MinorColor minorColor;
 };
 
-// Functions to convert between numbers and colors
 ColorPair GetColorFromPairNumber(int pairNumber);
 int GetPairNumberFromColor(MajorColor major, MinorColor minor);
 
